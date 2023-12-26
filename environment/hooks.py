@@ -27,9 +27,6 @@ def before_step(context, step):
 
 def after_step(context, step):
     print('STEP\t\t', step.name, '\t', step.status)
-    if step.status == 'failed':
-        chrome.take_screenshot(context)
-
     rp.after_step(context, step)
 
 
